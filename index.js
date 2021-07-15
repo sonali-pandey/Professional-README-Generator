@@ -2,6 +2,7 @@
 const fs = require ('fs');
 const inquirer = require('inquirer');
 const validator = require('email-validator');
+const generateReadme = require('./src/template.js');
 
 // inquirer prompts for questions
 const promptUser = () => {
@@ -76,21 +77,8 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: "Please choose the project's license:",
-            choices: ['Unlicensed', 'MIT', 'APACHE 2.0', 'Eclipse 1.0', 'GNU' , 'ISC', 'Mozilla'],
+            choices: ['Unlicensed', 'MIT', 'Apache', 'Eclipse', 'ISC', 'Mozilla'],
             default: 'Unlicensed'
-        },
-        {
-            type: 'checkbox',
-            name: 'language',
-            message:'What language(s) did you used for this project? (Check all that apply: SELECT AT LEAST ONE TO CONTINUE)',
-            choices: ['HTML','CSS','JavaScript','ES6','jQuery','Bootstrap','Node'],
-            validate: languageInput => {
-                if(languageInput.length){
-                    return true;
-                }else{
-                    return false;
-                }
-            }
         },
         {
             type: 'input',
@@ -119,4 +107,12 @@ const promptUser = () => {
     ]);
 };
 
-promptUser();
+promptUser()
+    .then(userData => {
+        const readmeFile = generateReadme(userData);
+        fs.writeFile('./sample-README/README.md', readmeFile , err => {
+            if (err) throw new Error(err);
+
+            console.log('README file generated!');
+          });
+    });
