@@ -40,7 +40,7 @@ ${description}
     
 
 ## Installation
-\' ${dependencies} \`
+\` ${dependencies} \`
 
 ## Usage
 ${usage}
@@ -53,8 +53,11 @@ ${licenseBadge}
     
 ## Questions
 **Author:** ${name}
+
 **Email ID:** ${email}
+
 **GitHub:** [${github}](https://github.com/${github})
+
 **Contributions:** ${contribution}
     `;
 };

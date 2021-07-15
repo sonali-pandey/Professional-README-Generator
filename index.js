@@ -110,7 +110,7 @@ const promptUser = () => {
 promptUser()
     .then(userData => {
         const readmeFile = generateReadme(userData);
-        fs.writeFile('./sample-README/README.md', readmeFile , err => {
+        fs.writeFile('./generated-README/README.md', readmeFile , err => {
             if (err) throw new Error(err);
 
             console.log('README file generated!');

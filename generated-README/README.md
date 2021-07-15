@@ -1,8 +1,8 @@
 
-# Project Title: s
+# Project Title: PROJECT TITLE
 
 ## Description
-s
+This is a sample README.md file.
     
 ## Table of Contents
     
@@ -14,20 +14,23 @@ s
     
 
 ## Installation
-npm i
+` npm i `
 
 ## Usage
 Install dependencies
     
 ## License
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
 ## Tests
 ` npm test `
     
 ## Questions
-**Author:** s
-**Email ID:** s@g.com
-**GitHub:** [s](https://github.com/s)
+**Author:** Jane Doe
+
+**Email ID:** jd@example.com
+
+**GitHub:** [jane-doe](https://github.com/jane-doe)
+
 **Contributions:** Contact the author
     
