@@ -2,7 +2,7 @@
 # Project Title: PROJECT TITLE
 
 ## Description
-This is a sample README.md file.
+This is a demo.
     
 ## Table of Contents
     
